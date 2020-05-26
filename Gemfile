@@ -20,7 +20,7 @@ gem 'webpacker', '~> 4.0'
 gem "devise"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem "aws-sdk-s3", require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
