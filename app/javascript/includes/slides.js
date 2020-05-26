@@ -1,28 +1,18 @@
-$(function(){
-  var $activeSlide = $('#slides .slide:first-child');
+alert('test');
 
-  // show first slide
-  $activeSlide.addClass("showing");
+var slides = document.querySelectorAll("#slides .slide")
+var currentSlide = 0;
 
-  $("#decline").on("click", function(){
-    goToSlide('decline');
-  });
-  
-  $("#approve").on("click", function(){
-    goToSlide('approve');
-  });
+function nextSlide() {
+  goToSlide(currentSlide + 1);
+}
 
-  // in this function we want to always go to the next user no matter if the user clicks on approve or decline.
-  function goToSlide(action){
-    $activeSlide.removeClass("showing");
-    $activeSlide = $activeSlide.next(".slide")
+function previousSlide() {
+  goToSlide(currentSlide - 1);
+}
 
-    if(action == "approve"){
-    } else {
-      
-    }
-    
-    $activeSlide.addClass("showing");
-  
-  }
-});
+function goToSlide(n) {
+  slides[currentSlide].className = 'slide';
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].className = 'slide showing';
+}
