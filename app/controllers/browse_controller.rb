@@ -1,10 +1,15 @@
 class BrowseController < ApplicationController
-	def browse
-	end
 
-	def approve
-	end
+def browse
+  @users = Account.where.not(id: current_account.id)
+end
 
-	def decline
-	end
+def approve
+  #user swipes right
+end
+
+def decline
+  #user swipes left
+end
+
 end
