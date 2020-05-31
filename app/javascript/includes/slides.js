@@ -1,5 +1,3 @@
-
-
 var slides = document.querySelectorAll("#slides .slide")
 var currentSlide = 0;
 
