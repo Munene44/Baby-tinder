@@ -10,4 +10,4 @@ Account.create([
   {first_name: "Sarah", last_name: "Kendi", username: "Munene", email: "sarah@user.com", password: "123456"},
   {first_name: "Andy", last_name: "Jones", username: "ajones", email: "andy@user.com", password: "123456"},
   {first_name: "Alex", last_name: "Baby", username: "ssmith", email: "alex@user.com", password: "123456"},
-])
+])AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
