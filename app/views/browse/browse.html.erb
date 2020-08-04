@@ -1,6 +1,6 @@
 <ul id="slides">
 <% @users.each do |user| %>
-<div class="slide" data-id="<%= user.id %>">
+<div class="slide showing" data-id="<%= user.id %>">
     <p><%= user.first_name %></p>
  </div>
 <% end %>
